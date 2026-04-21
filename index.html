@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Tu Tienda Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🛍️ TechStore</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="carrito-icon" id="carritoIcon">
+                <span>🛒</span>
+                <span class="carrito-count" id="carritoCount">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="banner" id="inicio">
+        <div class="banner-content">
+            <h2>Bienvenido a TechStore</h2>
+            <p>Encuentra los mejores productos tecnológicos al mejor precio</p>
+            <button class="btn-banner" onclick="document.getElementById('productos').scrollIntoView({behavior: 'smooth'})">
+                Comprar Ahora
+            </button>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section class="productos" id="productos">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <div class="filtros">
+                <button class="filtro-btn activo" onclick="filtrarProductos('todos')">Todos</button>
+                <button class="filtro-btn" onclick="filtrarProductos('laptops')">Laptops</button>
+                <button class="filtro-btn" onclick="filtrarProductos('accesorios')">Accesorios</button>
+                <button class="filtro-btn" onclick="filtrarProductos('smartphones')">Smartphones</button>
+            </div>
+            <div class="productos-grid" id="productosGrid">
+                <!-- Los productos se generarán con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal del Carrito -->
+    <div class="modal-carrito" id="modalCarrito">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarCarrito()">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div class="carrito-items" id="carritoItems">
+                <p class="carrito-vacio">Tu carrito está vacío</p>
+            </div>
+            <div class="carrito-total">
+                <p>Total: $<span id="totalCarrito">0.00</span></p>
+                <button class="btn-comprar" onclick="finalizarCompra()">Comprar Ahora</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer id="contacto">
+        <div class="container">
+            <p>&copy; 2024 TechStore. Todos los derechos reservados.</p>
+            <p>Email: info@techstore.com | Teléfono: +1 (555) 123-4567</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
