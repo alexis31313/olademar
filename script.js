@@ -61,7 +61,7 @@ const productos = [
         nombre: "Monitor 4K",
         categoria: "laptops",
         precio: 399.99,
-        descripcion: "Monitor de resolución 4K 144Hz",
+        descripcion: "Monitor de resolución 4K 144Hzaaaa",
         emoji: "🖥️"
     }
 ];
